@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>css 선택자</title>
+
+
+
+  <style>
+/* 후손 선택자;상위 선택자 하위선택자*/
+div span { color: orange; font-weight: bold}
+
+/*자손 선택자 ;상위선택자> 하위선택자*/
+/*div아래 직계 span에 스타일 적용*/
+div>span { background: indianred; font-style: italic }
+/*div  직계span후손 span에 스타일 적용*/
+div>span span { font-style: initial}
+/*ul  직계li에 스타일 적용*/
+ul>li {color: deeppink; font-style: italic}
+/*ul  직계li의 후손 li스타일 적용*/
+ul>li li {background: white}
+
+/*그룹 선택자: 선택자1, 선택자2*/
+span, li {background: ivory}
+
+
+/*동적의사 선택자:link, visited, hover ,active,focus*/
+a:link { color: black; text-decoration:none}
+a:visited { color: yellow; text-decoration:none}
+a:hover { color: orange; text-decoration:underline}
+a:active { color: red; text-decoration:underline}
+
+input :hover {background: aliceblue}
+input :focus {background: lemonchiffon}
+
+/*상태의사 선택자:checked, enabled, disabled*/
+input:checked { box-shadow: 0 0 0 3px hotpink}
+input:checked + label{color: firebrick;box-shadow: red}
+
+/* 구조적 의사 선택자;first-child, last-child,nth-child,nth-of-type*/
+
+  #maker>li { color: purple;background: white }
+#maker>li:first-child { color: red;background: white }
+#maker>li:last-child { color: green;background: white }
+#maker>li:last-child(3) { color: darkorchid;background: white }
+
+
+  </style>
+</head>
+<body>
+<h1>css 선택자</h1>
+<h2> 조합선택자</h2>
+      <p>스타일을 적용할 대상이
+
+        하나 이상인 경우에 사용하는 선택자</p>
+
+        <p>후손descendant 선택자 : 해당 요소 아래에 있는
+
+          모든 하위 요소들을 대상으로 하는 선택자</p>
+<div>
+  <span>
+      <span>우기 기관과 피가 되고우기 기관과 피가 되고우기 기관과 피가 되고 </span>
+      <span> 모든 국민은모든 국민은모든 국민은모든 국민은모든 국민은모든 국민은모든 국민은모든 국민은</span>
+      <span> 헌법재정은 국회에서 국가 원수 는헌법재정은 국회에서 국가 원수 는헌법재정은 국회에서 국가 원수 는 </span>
+  </span>
+
+  <span> 두손을 역시 좋은 것인가 스타일은 해피 해피한 것인가두손을 역시 좋은 것인가 스타일은 해피 해피한 것인가 </span>
+  <span> 우리나라 좋은 나라 인가 미국 좋은 나라우리나라 좋은 나라 인가 미국 좋은 나라 </span>
+
+
+</div>
+
+      <p>자식child 선택자 : 해당 요소 직계 아래에 있는</p>
+
+        하위 요소들을 대상으로 하는 선택자
+<ul>
+   <li>한식<ul>
+     <li>비빔밥</li>
+     <li>떡국</li>
+   </ul></li>
+
+  <li>라면</li>
+  <li>돈까스</li>
+
+
+
+
+</ul>
+
+        <p>그룹 선택자 : 여러 선택자를 혼합해서
+          요소들을 지정할때 사용하는 선택자</p>
+
+      <h2>가상(pseudo:의사 가짜) 선택자</h2>
+      <p>특정 태그에 미리 정의된 선택자를 부르는 말</p>
+
+      <p>동적의사 클래스 선택자 : 마우스 이벤트에 의해 스타일을
+
+      다르게 적용하고 싶을때 사용하는 선택자
+
+        <a href="#" >네이버로 이동</a>
+        <a href="#" >구글로 이동</a>
+
+        <input type="=text">
+        <input type="=password">
+
+     <p> 상태의사 클래스 선택자 : 폼의 상태에 따라
+  스타일을 다르게 적용하고 싶을때 사용하는 선택자</p>
+
+        <div><input type="radio"> <label>여자</label>
+  <input type="radio"> <label>남자</label>
+                          </div>
+
+
+      구조적 의사 클래스 선택자 : html 요소의
+
+      계층적 구조에서 특정 위치에 있는 요소를
+
+        선택할때 사용하는 선택자</p>
+
+<ul id="maker">
+  <li>삼성</li>
+  <li>애플</li>
+  <li>구글</li>
+  <li>lg</li>
+  <li>샤오미</li>
+</ul>
+
+
+</body>
+</html>
