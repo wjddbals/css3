@@ -17,6 +17,34 @@
     #font p:nth-child(2) {font-family:궁서체, 굴림체; font-size: 25px; background: yellow;}
     /*font-wight:blod 또는 normal*/
     #font p:nth-child(3) {font-family:궁서체;font-size: 25px;background: aliceblue; font-weight: bold;}
+
+    /*단축표기 :스타일 대소문자 변환 굵기크기 선간격글꼴*/
+    #font p:nth-child(5) { font :italic bold 25px 궁서체;background: cornsilk; }
+    /*텍스트 줄간격:기본값은120%*/
+    #line p {width: 50%}
+    #line p:first-child {  line-height: 185%}
+    #line p:first-child(2){  line-height:100%}
+    #line p:last-child{  line-height:50%}
+
+    /*글자간 간격 조정*/
+    #logo p:first-child {letter-spacing: 20px}
+    #logo p:first-child(2) {letter-spacing: 20px}
+    #logo p:last-child {letter-spacing: -5px}
+/*단어간 간격 조정*/
+    #logo2 p:first-child {word-spacing: 20px}
+    #logo2 p:first-child(2) {word-spacing: 20px}
+    #logo2 p:last-child {word-spacing: -5px}
+
+    /*텍스트 수평정렬*/
+    #align p:first-child {text-align: right;border: 1px solid red}
+    #align p:nth-child(2) {text-align: center}
+    #align p:last-child {text-align: left}
+
+    /*텍스트 구미기: none, underline, overline, line-through*/
+    #deco p:first-child {text-decoration: underline}
+    #deco p:nth-child(2) {text-decoration: overline}
+    #deco p:last-child {text-decoration: line-through}
+
   </style>
 </head>
 <body>
@@ -26,21 +54,67 @@
 
 <h2>font-xxx 속성</h2>
 <p>font-size;텍스트크기지정 font-family: 텍스트의 글쫄지정
-  font-weight:텍스트의 진하기
-  font-style:스타일지정
-  font -xxx:텍스트 단축 표기</p>
+<p>font-weight:텍스트의 진하기</p>
+<p>font-style:스타일지정</p>
+  <p>font -xxx:텍스트 단축 표기
+
+    스타일 대소문자변환 굵기 크기 선간격 줄간격 종류</p>
  <div id="font">
-  <p>노루 노루 마링 아스라이 하나에 없이 내잠 불러 강아지 속의 이름고  가을로 이네들은 별 언덕 하나에 이름과
-   마리아 라이너 별 별빛이 내내 내린 별 소학고 가고 ㅇㅆ데 별별
-   노루 노루 마링 아스라이 하나에 없이 내잠 불러 강아지 속의 이름고  가을로 이네들은 별 언덕 하나에 이름과
-    마리아 라이너 별 별빛이 내내 내린 별 소학고 가고 ㅇㅆ데 별별</p>
+  <p>노루 노루 마리 개나리 아스라이 하나에 없이 내잠 불러 강아지 속의 이름고  가을로 이네들은 별 언덕 하나에 이름과
+    마리아 라이너 별 별빛이 내내 내린 별 소학고 가고 하늘에 별이 덩그렁데</p>
+   <p> 별별 노루 노루 마링 아스라이 하나에 없이 내잠 불러 강아지 속의 이름고  가을로 이네들은 별 언덕 하나에 이름과
+    마리아 라이너 별 별빛이 내내 내린 별 소학고 가고 있는데 별별</p>
+
+   <h2>line-height</h2>
+<p>텍스트의 줄간격 설정</p>
+
+   <div id="line">
+     <p>노루 노루 마리 개나리 아스라이 하나에 없이 내잠 불러 강아지 속의 이름고  가을로 이네들은 별 언덕 하나에 이름과
+       마리아 라이너 별 별빛이 내내 내린 별 소학고 가고 하늘에 별이 마리아 라이너 별 별빛이 내내 내린 별 소학고 가고 하늘에 별이 마리아 라이너 별 별빛이 내내 내린 별 소학고 가고 하늘에 별이 덩그렁데</p>
+     <p> 별별 노루 노루 마링 아스라이 하나에 없이 내잠 불러 강아지 속의 이름고  가을로 이네들은 별 언덕 하나에 이름과
+       마리아 라이너 별 별빛이 내내 내린 별 소학고 가고 있는데 별별</p>
 
 
+
+   </div>
 
 
 
 
  </div>
 
+<h2>letter-spacing</h2>
+<p>텍스트내 글자 사이 간격 조정</p>
+<div id="logo">
+  <p>marvel's avengers: infinity war</p>
+  <p>ant-man and thr wasp :quatn</p>
+  <p>ant-man and thr wasp :quatn</p>
+</div>
+<h2>word-spacing</h2>
+<p>텍스트내 단어 사이 간격 조정</p>
+<div id="logo2">
+  <p>marvel's avengers: end game</p>
+  <p>ant-man and thr wasp :quatn</p>
+  <p>ant-man and thr wasp :quatn</p>
+</div>
+
+<h2>text-align</h2>
+<p>텍스트의 수평방향 정렬 설정</p>
+
+<div id="align">
+  <p>시간은 금이라구 </p>
+  <p>시간은 금이라구 </p>
+  <p>시간은 금이라구 </p>
+
+</div>
+
+<h2>text-decoration</h2>
+<p>첵스트에 여려가지 꾸민 효과를 부여 제거함</p>
+ <div id="deco">
+   <p>시간은 금이라구 </p>
+   <p>시간은 금이라구 </p>
+   <p>시간은 금이라구 </p>
+
+ </div>
 </body>
 </html>
