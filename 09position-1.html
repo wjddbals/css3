@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8">
+  <title>css position 관련</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+
+  <style>
+    #box1 { width: 150px; height: 150px;
+      background: yellow; left:1000px }
+    #box2 {width: 200px; height: 200px;
+      background: red; }
+
+    /* box3은 box2의 너비 내에 배치*/
+    #box3 {background: greenyellow; border: 1px solid black; line-height: 150px }
+
+    /*absolute 배치 */
+    #box4 {width: 250px; height: 250px; background: violet; position: absolute; top: 50px;left: 50px}
+    /*absolute  */
+    #box5 {width: 250px; height: 250px; background: cyan; position: absolute; bottom: 50px;right: 50px; opacity: 0.5}
+    /*box7은 box6내에서 만 움직이도록position :relative */
+    #box6 {width: 250px; height: 250px; background: peachpuff; position: relative;}
+    #box7 {width: 105px; height: 105px; background: gold; position: absolute; bottom: 50px;right: 50px}
+
+    /*relative 배치 */
+    #box8 {width: 250px; height: 250px; background: darkmagenta;color:white }
+    #box9 {width: 250px; height: 250px; background: blue; position: relative;top: 50px;left: 50px;}
+    /* 부모요소의 자식요소는 부모요소의 위치가 바뀌면 같이 위치가 바뀜 --마진을 주니까 */
+    #box10 {width: 250px; height: 250px; background: green;color:white ; margin: 100px}
+    #box11  {width: 250px; height: 250px; background: orange; position: relative;top: 50px;left: 50px;}
+
+    /*fixed 고정위치*/
+    #cart { width: 100px; height: 200px; background: darkblue; position: fixed;
+      top:50px;right: 50px}
+
+    /*sticky */
+    #sticky {width: 200px; height: 100px; background: lightyellow;
+      position: sticky; position: -webkit-sticky; top:30px}
+
+    /*x-index*/
+    #box12 {width: 500px; height: 400px; border: 1px dashed black; position: relative}
+    #box13,#box14,#box15 {width: 200px; height: 200px; position: absolute}
+    #box13 {background: mediumaquamarine;top:50px;left: 50px; z-index: 999}
+    #box14 {background: orange;top:100px;left: 100px}
+    #box15 {background: skyblue; top:150px;left: 150px;z-index: 888}
+
+    /*overflow*/
+    #overflow p {width: 150px; height: 150px;
+      border: 1px dashed red; padding: 10px}
+    #overflow p:first-child{overflow: hidden;
+    }
+    #overflow p:last-child {overflow: scroll;
+    }
+    #overflow p:nth-child(2) {overflow: auto;
+      bo}
+  </style>
+
+</head>
+
+<body>
+<h2>css position 관련</h2>
+<h3>개요</h3>
+<p>지금까지는 margin/padding 도는 인라인/블록 요소의 특성에 의해 부분적으로나 요소의 위치를 지정할
+  수 있었음반면 position이라는 속성을 이용하면 html요소들의 위치를 좌표등으로 결정할 수
+  있음즉 top/left/right/bottom 등의 속성으로 요소의 위치를 정할 수 있음</p>
+
+<h3>static position</h3>
+<p>기본적인 요소 배치순서에 다라 위>아래 왼>오른쪽으로 배치되며 부모 자식 관걔의 요소는 부모요소에 따라 배치됨</p>
+
+<div id="box1">box#1</div>
+<div id="box2">box#2</div>
+<div id="box3">box#3</div>
+
+<h3>absolute position</h3>
+<p>조상요소(body) 또는 부모요소를 기준으로 top/left/right/bottom만킄 요소를 이동시켜 배치 단 부모
+  요소를 기준으로 하위요소를 배치하며면 부모요소의 position은 relative이어야 함</p>
+
+
+<div id="box4">box#4</div>
+<div id="box5">box#5</div>
+<div id="box6">box#6</div>
+<div id="box7">box#7</div>
+
+<h3>relative position</h3>
+<p>(static으로 선언된)=  요소 자신이 있는 위치를 기준으로 top left right bottom만클 요소를 이동시켜 배치</p>
+
+<div id="box8">box#8</div>
+<div id="box9">box#9</div>
+<div id="box10">box#10</div>
+<div id="box11">box#11</div>
+
+<h3>fixed position</h3>
+<p>뷰포트(웹페이지 가시영역) 를 기준으로 top lett right bottom 만큼
+  따라서 브라우져를 스크롤하더라도 요소를 이동시켜 배치
+  뷰포틔으 특정위치에 요소가 배치됨</p>
+
+<div id="cart">
+
+
+
+</div>
+
+
+<h3>sticky position</h3>
+<p>relative position과 fixed position을 적절히 조합해서
+  만든 position </p>
+<p>평소에는 relative 방식으로 요소를 처리하다가 해당요소가 뷰포트를 지나찰때 미리 설정한 임계값이 넘으면 fixed처럼 화면에 고정시킴
+</p>
+
+<div id="sticky"></div>
+<p>1234569871022</p>
+<p>1234569871022b</p>
+<p>&1234569871022;</p>
+<p>&1234569871022;</p>
+<p>&1234569871022;</p>
+<p>&1234569871022;</p>
+<p>&1234569871022;</p>
+<p>&1234569871022;</p>
+<p>&1234569871022;</p>
+<p>&1234569871022;</p>
+<p>&1234569871022;</p>
+<p>&1234569871022;</p>
+<p>&1234569871022;</p>
+<p>&1234569871022;</p>
+<p>&1234569871022;</p>
+<p>&1234569871022;</p>
+<p>&1234569871022;</p>
+<p>&1234569871022;</p>
+<p>&1234569871022;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+<h3>z-index position</h3>
+
+<p>요소를 배치하다보면 설정된 위치나 방식에  따라 서로 겹칠수 있음
+  즉 먼저 만들어지는 요소는 나중에 만들어진 요소보다밑(뒤)에 배치됨
+</p>
+
+<p>요소가 쌓이는 순서를 지정하고 싶다면 z-index를 지정하면 되고 z-index값이 클수록 앞쪽에 위치함</p>
+<div id="box12"></div>
+<div id="box13">13</div>
+<div id="box14">14</div>
+<div id="box15">15</div>
+
+
+
+
+
+<h2>overflow</h2>
+<p> 자식요소가 부모요소를 벗었났을때의 처리방법을 정의</p>
+
+<div id="overflow"></div>
+
+<p>가을로 이네들은 별 언덕 하나에 이름과가을로 이네들은 별 언덕 하나에 이름과가을로 이네들은
+  별 언덕 하나에 이름과가을로 이네들은 별 언덕 하나에 이름과가을로 이네들은 별 언덕 하나에
+  이름과이네들은 별 언덕 하나에 이름과이네들은 별 언덕 하나에 이름과별 언덕 하나에 이름과이네들은
+  별 언덕 하나에 이름과별 언덕 하나에 이름과이네들은 별 언덕 하나에
+  별 언덕 하나에 이름과별 언덕 하나에 이름과이네들은 별 언덕 하나에
+  별 언덕 하나에 이름과별 언덕 하나에 이름과이네들은 별 언덕 하나에
+  별 언덕 하나에 이름과별 언덕 하나에 이름과이네들은 별 언덕 하나에
+  별 언덕 하나에 이름과별 언덕 하나에 이름과이네들은 별 언덕 하나에
+  별 언덕 하나에 이름과별 언덕 하나에 이름과이네들은 별 언덕 하나에
+  이름과별 언덕 하나에 이름과이네들은 별 언덕 하나에 이름과 </p>
+
+<p>가을로 이네들은 별 언덕 하나에 이름과가을로 이네들은 별 언덕 하나에 이름과가을로 이네들은
+  별 언덕 하나에 이름과가을로 이네들은 별 언덕 하나에 이름과가을로 이네들은 별 언덕 하나에
+  이름과이네들은 별 언덕 하나에 이름과이네들은 별 언덕 하나에 이름과별 언덕 하나에 이름과이네들은
+  별 언덕 하나에 이름과별 언덕 하나에 이름과이네들은 별 언덕 하나에
+  별 언덕 하나에 이름과별 언덕 하나에 이름과이네들은 별 언덕 하나에
+  별 언덕 하나에 이름과별 언덕 하나에 이름과이네들은 별 언덕 하나에
+  별 언덕 하나에 이름과별 언덕 하나에 이름과이네들은 별 언덕 하나에
+  별 언덕 하나에 이름과별 언덕 하나에 이름과이네들은 별 언덕 하나에
+  별 언덕 하나에 이름과별 언덕 하나에 이름과이네들은 별 언덕 하나에
+  이름과별 언덕 하나에 이름과이네들은 별 언덕 하나에 이름과 </p>
+<p>가을로 이네들은 별 언덕 하나에 이름과가을로 이네들은 별 언덕 하나에 이름과가을로 이네들은
+  별 언덕 하나에 이름과가을로 이네들은 별 언덕 하나에 이름과가을로 이네들은 별 언덕 하나에
+  이름과이네들은 별 언덕 하나에 이름과이네들은 별 언덕 하나에 이름과별 언덕 하나에 이름과이네들은
+  별 언덕 하나에 이름과별 언덕 하나에 이름과이네들은 별 언덕 하나에
+  별 언덕 하나에 이름과별 언덕 하나에 이름과이네들은 별 언덕 하나에
+  별 언덕 하나에 이름과별 언덕 하나에 이름과이네들은 별 언덕 하나에
+  별 언덕 하나에 이름과별 언덕 하나에 이름과이네들은 별 언덕 하나에
+  별 언덕 하나에 이름과별 언덕 하나에 이름과이네들은 별 언덕 하나에
+  별 언덕 하나에 이름과별 언덕 하나에 이름과이네들은 별 언덕 하나에
+  이름과별 언덕 하나에 이름과이네들은 별 언덕 하나에 이름과 </p>
+
+
+</body>
+</html>
