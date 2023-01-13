@@ -14,7 +14,7 @@
 
     #box4,#box5,#box6,#box7,
     #box8,#box9,#box10,#box11,#box13,
-    #box12{ width: 450;height: 200px;
+    #box12{ width: 450px;height: 200px;
     background-color:yellow}
                                  #box4 {background-image: url(img/css_img/plane.png)}
     #box5 {background-image: url(img/rubber-duck.png); background:-repeat-x;
@@ -73,8 +73,22 @@
     #box16 {width: 43px; background:  url("img/img_navsprites.gif") -91px 0;}
     #box16:hover {background: url("img/img_navsprites.gif")-91px -45px;
       margin: 25px;}
+      /*그라디언트 */
+    #box17,#box18,#box19{width: 250px;height: 150px;}
 
+    #box21,#box20{width: 250px;height: 150px; margin: 25px 0}
 
+    #box20{ background: radial-gradient(red,orange,green,yellow,blue)}
+    #box21 {}
+      /*linear-gradient방향 색1 색2....*/
+    #box17 {background: linear-gradient(to right,blue,pink)}/*폰지션에따라 그림 크기 를 다르게 보일수 있다*/
+
+    #box18 {background: linear-gradient(pink,blue);
+     }
+
+    #box19 {background: linear-gradient(to right,red,orange,green,yellow,blue)}
+   /* #box16:hover {background: url("img/img_navsprites.gif")-91px -45px;
+      margin: 25px;}*/
 
 
   </style>
@@ -148,6 +162,16 @@
   <div id="box14">&nbsp;</div>
   <div id="box15">&nbsp;</div>
   <div id="box16">&nbsp;</div>
+
+<h2>그라디언트</h2>
+<p>두가지 이상의 색간의 점진적 변화를 표헌하는 기법</p>
+<p>그라디언트의 종ㄿ는 선형 방사형 각진원형등이 있음</p>
+  <div id="box17">&nbsp;</div>
+  <div id="box18">&nbsp;</div>
+  <div id="box19">&nbsp;</div>
+
+  <div id="box20">&nbsp;</div>
+  <div id="box21">&nbsp;</div>
 
 </body>
 </html>
