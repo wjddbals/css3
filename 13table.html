@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../css/normalize.css">
   <link rel="stylesheet" href="../css/main.css">
 <style>
-  /*border-spacing으로 테두리를  합틸 경우 두겹게 푯시*/
+  /*border-spacing으로 테두리를  합틸 경우 두겹게 표시*/
   table{ width: 50%;border: 1px solid black;
   border-color: collapse /*border-spacing: 0*/}
   .tb1 th,.tb1 td{ border: 1px solid black;}
@@ -19,13 +19,33 @@
 #tb2 td:last-child {
   overflow: hidden;text-overflow: ellipsis}
 
-/*x테이블 내용수직 정렬*/
+/*테이블 내용수직 정렬*/
   #tb3{width: 500px; height: 300px}
   #tb3 td{border: 1px solid black}
   #tb3 tr:first-child td{vertical-align: top}
    #tb3 tr:first-child(2) td{vertical-align: bottom}
    #tb3 tr:last-child) td{vertical-align: middle;text-align: center}
+                       /*div요소 이용해서 테이블 만들기*/
+  /*display:table: 블록요소를 테이블터럼 보이게 함*/
+  /*display:table-row: 블록요소를 테이블 행처럼 보이게 함*/
+  /*display:table-cell: 블록요소를 테이블 셀처럼 보이게 함*/
 
+  /*행별 높이는 30px*/
+   #tb4 {width: 50%;height: 60px; border: 1px solid black;display: table}
+  #tb4 {display: table-row;}
+   #tb4 .th,#tb4 .td {border: 1px solid black;display: table-cell;padding: 10px;borer-collapse:collapse}
+   #tb4 .th {font-weight: bold;text-align: center}
+
+   /*테이블꾸미기*/
+   #tb5 { border-top: 3px solid black;
+   border-bottom: 3px solid black;}
+   #tb4 th,#tb5 td ,#tb5 th{ border-left: none;boder-right:none;
+   padding: 10px;}
+
+   #tb5 tr:nth-child(odd) {background: ivory}
+  #tb5 tr:nth-child(even) {background: cornsilk}
+  /*백그라운드. 방문시 글자색 까지 빠꿈*/
+  #tb5 tr:hover {background: yellow; color: white}
 
 </style>
 
@@ -92,6 +112,68 @@ border-collapse 속성으로 테이블의 테두리를 어떻게 표헌할지 �
 
   <tr><td>1234567890</td><td>1234567890</td>
   <td>1234567890</td></tr>
+
+
+
+  </table>
+
+<h2>display 속성으로 테이블 만들기</h2>
+<P>display  속성은 일반덕으로 인라인요소나 블록요소를 변환해서 레이아웃을 구성하는데 사용
+하지만 display속성에 table을 지정하면 블록요소가 테이블의 성질을 가지게 할수 있음</P>
+
+<div id="tb4">
+
+  <div class="tr">
+
+    <div class="th">이름</div>
+
+    <div class="th">국어</div>
+
+    <div class="th">영어</div>
+
+    <div class="th">수학</div>
+
+  </div>
+
+  <div class="tr">
+
+    <div class="td">혜교</div>
+
+    <div class="td">99</div>
+
+    <div class="td">98</div>
+
+    <div class="td">99</div>
+
+  </div>
+</div>
+
+<h2>테이블 에쁘게 꾸미기</h2>
+<p>테이블 짝수행 과 홀수행의 배경색을 다르게 지정-
+얼룩말무의 스트라이프 무틔</p>
+<p>hover 클래스 선택자를 이용해서 현재 행의 배경색을 다르게 표시
+테이블 테두리도 행기준 아래쪽에만 표시하도록 함</p>
+ <table id="tb5">
+
+  <tr><th>이름</th><th>국어</th><th>영어</th><th>수학</th></tr>
+
+  <tr><td>혜교</td><td>99</td><td>98</td><td>99</td></tr>
+
+  <tr><td>지현</td><td>54</td><td>77</td><td>87</td></tr>
+
+  <tr><td>수지</td><td>78</td><td>45</td><td>32</td></tr>
+
+  <tr><td>혜교</td><td>99</td><td>98</td><td>99</td></tr>
+
+  <tr><td>지현</td><td>54</td><td>77</td><td>87</td></tr>
+
+  <tr><td>수지</td><td>78</td><td>45</td><td>32</td></tr>
+
+  <tr><td>혜교</td><td>99</td><td>98</td><td>99</td></tr>
+
+  <tr><td>지현</td><td>54</td><td>77</td><td>87</td></tr>
+
+  <tr><td>수지</td><td>78</td><td>45</td><td>32</td></tr>
 
   </table>
 </body>
