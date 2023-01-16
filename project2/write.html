@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>write</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="..css/project2.css">
+</head>
+<body>
+<header><h1>JSP 프로젝트 v1</h1></header>
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="join.html">회원가입</a></li>
+        <li><a href="login.html">로그인</a></li>
+        <li><a href="list.html">게시판</a></li>
+        <li><a href="myinfo.html">회원정보</a></li>
+    </ul>
+    <hr>
+</nav>
+<main>
+    <h2>새글쓰기</h2>
+    <form name="write"
+    <table>
+        <tr><th><label for="title">제목</label></th><td><input type="text" name="title" id="title"></td></tr>
+        <tr><th><작성자</th><td>
+            <input type="text" name="uid" id="uid" value="zzyzzy" readonly>
+        </td></tr>
+
+        <tr><th><label for="contents">본문</label> </th>
+            <td><textarea name="contents" id="contents" row="7" cols="55"
+            </textarea></td></tr>
+        <tr><td colspan="2">
+            <button type="button">목록으로</button>
+            <button type="button">수정하기</button>
+            <button type="button">삭제하기</button>
+            <button type="button"
+                    onclick="location.href=write.html">새글쓰기</button>
+        </td></tr>
+    </table>
+</main>
+<footer>
+    <hr>
+    <div>copyright &copy; 2023. zzyzzy. All Rights Reserved.</div>
+</footer>
+</body>
+</html>
