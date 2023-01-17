@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>css 유동 웹디자인fluid</title>
+
+  <style>
+
+    .wrapper {border: solid blue; max-width: 1400px;margin: 0 auto;}
+
+    header {width: 100%;height: 130px;background: #038c5a;}
+    .main .left .right  {height: 625px;display: inline-block}
+    /*고정너비 */
+   /* .left {width: 245px;background: #03a66a}
+    .main {width: 898px;background: #cccccc}
+    .right{width: 245px;background: #03a66a}*/
+
+    /*유동너비 %,em,rem*/
+    main {width: 100%}
+    .left {width: 20%;background: #03a66a}
+    .main {width: 58%;background: #cccccc}
+    .right{width: 20%;background: #03a66a}
+
+    footer {width: 100%;height: 200px;background: #025059;}
+
+
+  </style>
+</head>
+<body>
+<h1>css 유동 웹디자인fluid</h1>
+<h2>개요</h2>
+<p>fluid웹 디자인은 페이지 내 요소들의 너비를 화면 또는 브라우저 창의 너비에 따라
+비레해서 나타내는 것을 의미
+즉 현재 뷰포트의 너비에 따라 확장되거나 추소된다는 것을 의미
+스크린의 크기가 다른 여러 환경에서도 엡사이트의 사용성을 높이는데 유용하</p>
+<p>이것을 이용해 스크린에 상관없이 웹사이트의 레이아웃이 언베나 비슬하게
+보여지도록 보장함일관된 레이아웃은 사용자에게 가능한 많으 ㄴ방문자에게
+사용성을 보장해 주면서 ui/UX가향상되록 도와줌</p>
+<img src="img/fluid01.png"width="40%"><br>
+<img src="img/fluid02.png" width="30%" >
+
+<hr>
+
+<div class="wrapper">
+  <header></header>
+    <main>
+      <aside class="left"></aside>
+      <section class="main"></section>
+      <aside class="right"></aside>
+    </main>
+  <footer></footer>
+</div>
+
+</body>
+</html>
