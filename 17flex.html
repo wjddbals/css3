@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>css flexbox layout </title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+<style>
+  .centerme {height: 200px;background: indigo;color: #ebebeb;display: flex;align-items: center
+    ;justify-content:center;font-size: 32px;}
+
+  .menus {background: indigo;padding: 0 16px;min-height:44px ;color:#ebebeb;font-size: 16px;display: flex;
+  align-items: center;/*flex-direction: row-reverse*/
+    /*flex-direction: column*/}
+.item {margin-right: 16px;}
+/* 기존항목과 마지막 항목간의 배치방식에마진을 자동으로 설정*/
+.last-item {margin-left:auto;/*margin-right: auto*/}
+
+</style>
+
+</head>
+<body>
+<h1>css flexbox layout</h1>
+<h2>개요</h2>
+<p>뷰포트나 요소의 크기가 불명확하거나 동적으로 변할때에도 효율적으로
+요소를 배치 정렬 분산할수 있는 방법을 제공하는 css의 새로운
+레이아웃 방식
+flexbox layout의 장점은 복잡한 게산없이 요소의 크기오 순서를
+유연하게 배치할수 있다라는 것임</p>
+<p>정렬 방향 순서 크긷등을 유연하게 조절할수 있기 대문에 별도의 분기처리를 줄일
+수있고 css만으로 다양한 레이아웃 구현 가능</p>
+<p>flexbox froggy-flexboxfroggy.com</p>
+<img src="img/flexbox01.png">
+
+<h2>수직으로 텍스트 정렬하기</h2>
+<p>display:flex -flex 컨테이너에 flex박스 레이아웃 젹용시작</p>
+<p>align-items: 크로스축을 기준으로 아이템드을 수직 정렬함-flex-start,center, flex-end</p>
+<p>justify-content:메인축을 기준으로 아이템드을 수평 정렬함- center,right,left</p>
+
+<div class="centerme">hello, flexbox layout</div>
+<h2>header 메뉴 배치하기</h2>
+
+<p>flex-direction:메인축을 기중으로 아이템을 어떻게
+배치할것인지 결정-row(가로).reverse-row,column(세로),reverse-column</p>
+<header class="menus">
+  <a href="#" class="item">home</a>
+  <a href="#" class="item">about us</a>
+  <a href="#" class="item">products</a>
+  <a href="#" class="item">policy</a>
+  <a href="#" class="last-item">contact us</a>
+</header>
+
+</body>
+</html>
