@@ -169,7 +169,7 @@ system.out.println(hello, world!!");
 * https://editor.codecogs.com 를 참조함
 ---
 $a^2= b^2+ c^2$<br>
-$$x=-b $$
+$$x={-b\pm\sqrt{b^2-4ac}\over 2a]$$
 
 
 
