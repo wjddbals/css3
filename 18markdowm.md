@@ -165,9 +165,11 @@ system.out.println(hello, world!!");
 * LaTex형식의 수식 작성법을 지원
 * 수식을 작성하려면 $ $ 기호를 사용
 * 문법 참조 https://ko.wikipedia.org/wiki/%EC%9C%84%ED%82%A4%EB%B0%B1%EA%B3%BC:TeX_%EB%AC%B8%EB%B2%95
-
+* 온라인에서 간단히 LaTex문법을 확인하고 싶다면
+* https://editor.codecogs.com 를 참조함
 ---
-$ a= b + c $
+$a^= b^+ c^$<br>
+$$x=-b $$
 
 
 
