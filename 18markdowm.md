@@ -168,7 +168,7 @@ system.out.println(hello, world!!");
 * 온라인에서 간단히 LaTex문법을 확인하고 싶다면
 * https://editor.codecogs.com 를 참조함
 ---
-$a^= b^+ c^$<br>
+$a^2= b^2+ c^2$<br>
 $$x=-b $$
 
 
